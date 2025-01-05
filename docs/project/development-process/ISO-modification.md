@@ -12,16 +12,9 @@ Warning: not taking care of the root-permissions will lead to problems running t
 
 ```
 mkdir tmpmountdir/
-mount -o loop filename.iso tmpmountdir/ # as root
-cp -a tmpmountdir/. iso
-umount tmpmountdir/ # as root
-```
-
-Now you have the contents of the ISO image in the `iso/` directory. Note that everything in the directory is read-only at this stage, so you will need to change the file permissions or be root to modify the files.
-
-For example:
-```
-chmod a+w iso/ -R
+sudo mount -o loop filename.iso tmpmountdir/
+sudo cp -a tmpmountdir/. iso
+sudo umount tmpmountdir/
 ```
 
 ## Contents of the installation ISO image
