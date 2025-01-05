@@ -8,6 +8,8 @@ Obviously, a modified installation image is not an official installation image a
 
 ## Extract an existing ISO image
 
+Warning: not taking care of the root-permissions will lead to problems running the installer later on a machine as the booting system will not be able to access certain files as they have wrong permissions.
+
 ```
 mkdir tmpmountdir/
 mount -o loop filename.iso tmpmountdir/ # as root
